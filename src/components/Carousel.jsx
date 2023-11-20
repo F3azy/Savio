@@ -57,7 +57,7 @@ const Carousel = ({
 
   const widthPercentege = (100 * elementsTotal) / visibleElements;
   const widthGap =
-    (noGap ? 0 : 20 * elementsTotal) / visibleElements - noGap ? 0 : 20;
+    (noGap ? 0 : 20 * elementsTotal) / visibleElements - (noGap ? 0 : 20);
   const calcString = "calc(" + widthPercentege + "% + " + widthGap + "px)";
 
   return (
@@ -79,7 +79,7 @@ const Carousel = ({
             transform: `translateX(calc((-${
               (100 * visibleElements) / elementsTotal
             }% - ${
-              noGap ? 0 : 20 * (visibleElements / elementsTotal)
+              (noGap ? 0 : 20 * (visibleElements / elementsTotal))
             }px) * ${currentPage})`,
           }}
         >
@@ -99,10 +99,9 @@ const Carousel = ({
           flex-wrap
           content-center
           px-2
-          shadow-[0_0_10px_15px_#1f1f1f]
           bg-[#1f1f1f]
           hover:bg-[#131313]
-          hover:shadow-[0_0_10px_15px_#131313]
+
           "
               onClick={() => changePage(ACTIONS.PREVIOUS)}
             >
@@ -120,10 +119,8 @@ const Carousel = ({
         flex-wrap
         content-center
         px-2
-        shadow-[0_0_10px_15px_#1f1f1f]
         bg-[#1f1f1f]
         hover:bg-[#131313]
-        hover:shadow-[0_0_10px_15px_#131313]
         "
               onClick={() => changePage(ACTIONS.NEXT)}
             >
