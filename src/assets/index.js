@@ -1,3 +1,3 @@
-import HeroBG from "./HeroBG.svg";
+import HeroBlob from "./HeroBlob.svg";
 
-export { HeroBG };
+export { HeroBlob };
