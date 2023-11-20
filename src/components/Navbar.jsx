@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SavioLogo } from "../assets";
 
 const Navbar = () => {
   return (
     <nav
       className="
-      w-full flex justify-between 
+      w-full max-h-[68px] flex justify-between 
     px-[16px] 2xl:px-[340px] 
     py-[12px] 2xl:py-[16px]
     sticky top-0
-    bg-blue-50
+    bg-blue-100
      "
     >
-      <img src="vite.svg" alt="logo" />
+      <img className="w-[100px]" src={SavioLogo} alt="logo"/>
       <div
         className="flex flex-wrap 
       content-center 
