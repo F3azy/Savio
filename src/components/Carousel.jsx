@@ -96,6 +96,7 @@ const Carousel = ({
           flex-wrap
           content-center
           px-2
+          rounded-r-xl
           bg-[#1f1f1f]
           hover:bg-[#131313]
 
@@ -116,6 +117,7 @@ const Carousel = ({
         flex-wrap
         content-center
         px-2
+        rounded-l-xl
         bg-[#1f1f1f]
         hover:bg-[#131313]
         "

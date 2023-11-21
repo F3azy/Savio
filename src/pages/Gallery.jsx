@@ -5,7 +5,7 @@ import { YTThumbnail, YTVideos } from "../constans";
 
 const Gallery = () => {
   return (
-    <>
+    <div className="flex flex-col gap-y-[8px]">
       <h3 className="text-[24px] font-bold">Video</h3>
       <div className="mx-[-340px] overflow-hidden">
         <Carousel
@@ -15,7 +15,7 @@ const Gallery = () => {
           noGap={false}
         >
           {YTThumbnail.map((thumbnail, idx) => (
-            <div key={idx} className="overflow-hidden relative">
+            <div key={idx} className="overflow-hidden relative rounded-3xl">
               <img
                 className="my-[-10%] w-full"
                 src={thumbnail}
@@ -48,7 +48,7 @@ const Gallery = () => {
               allowfullscreen
             ></iframe>
           </div> */}
-    </>
+    </div>
   );
 };
 
