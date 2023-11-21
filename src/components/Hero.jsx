@@ -36,8 +36,9 @@ const Hero = () => {
           className="
         text-neutral-600 
         leading-[1.5] 
-        tracking-wide 
+        tracking-wider
         text-justify
+        font-medium
         "
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
