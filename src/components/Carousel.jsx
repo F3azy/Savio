@@ -11,7 +11,6 @@ const Carousel = ({
   elementsTotal,
   visibleElements,
   showButtons = true,
-  noGap = true,
   gap = 0,
   animate,
   children,
@@ -78,7 +77,7 @@ const Carousel = ({
           transform: `translateX(calc((-${
             (100 * visibleElements) / elementsTotal
           }% - ${
-            noGap ? 0 : 20 * (visibleElements / elementsTotal)
+            gap * (visibleElements / elementsTotal)
           }px) * ${currentPage})`,
         }}
       >
