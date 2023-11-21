@@ -8,7 +8,6 @@ const ACTIONS = {
 };
 
 const Carousel = ({
-  carouselTitle,
   elementsTotal,
   visibleElements,
   showButtons = true,
@@ -60,12 +59,10 @@ const Carousel = ({
     (noGap ? 0 : 20 * elementsTotal) / visibleElements - (noGap ? 0 : 20);
   const calcString = "calc(" + widthPercentege + "% + " + widthGap + "px)";
 
+  const buttonsWithGap = noGap ? "relative" : "relative px-[52px]" 
+
   return (
-    <div className="flex flex-col gap-y-[8px]">
-      {carouselTitle && (
-        <h3 className="text-[24px] font-bold">{carouselTitle}</h3>
-      )}
-      <div className="relative">
+      <div className={buttonsWithGap}>
         <div
           className={`
           grid
@@ -129,7 +126,6 @@ const Carousel = ({
           </>
         )}
       </div>
-    </div>
   );
 };
 
