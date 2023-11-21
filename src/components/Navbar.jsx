@@ -10,10 +10,12 @@ const Navbar = () => {
     px-[16px] 2xl:px-[340px] 
     py-[12px] 2xl:py-[16px]
     sticky top-0
-    bg-blue-100
+    bg-blue-50
      "
     >
-      <img className="w-[100px]" src={SavioLogo} alt="logo"/>
+      <Link to="/">
+        <img className="w-[100px]" src={SavioLogo} alt="logo" />
+      </Link>
       <div
         className="flex flex-wrap 
       content-center 
