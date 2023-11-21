@@ -19,11 +19,11 @@ const Modal = ({ isOpen, onClose, children }) => {
       <IoMdClose
         className="
       fixed 
-      top-20 
+      top-10 
       right-5
       z-[1000]
       text-violet-50
-      hover:text-violet-300
+      hover:text-brand-secondary
       cursor-pointer
       "
         size={70}
@@ -36,9 +36,6 @@ const Modal = ({ isOpen, onClose, children }) => {
       z-[1000]
      -translate-x-1/2
      -translate-y-1/2
-      flex
-      justify-center
-    content-center
     "
       >
         {children}
