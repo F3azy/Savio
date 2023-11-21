@@ -49,7 +49,7 @@ const Hero = () => {
       <div className="flex-[0.4] relative">
         <div
           className="
-        w-[70%]
+        w-[75%]
         overflow-hidden
         rounded-xl 
         shadow-[8px_16px_25px_#1f1f1f99]
