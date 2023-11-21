@@ -12,6 +12,7 @@ const Carousel = ({
   visibleElements,
   showButtons = true,
   noGap = true,
+  gap = 0,
   animate,
   children,
 }) => {
@@ -56,36 +57,37 @@ const Carousel = ({
 
   const widthPercentege = (100 * elementsTotal) / visibleElements;
   const widthGap =
-    (noGap ? 0 : 20 * elementsTotal) / visibleElements - (noGap ? 0 : 20);
+    (gap * elementsTotal) / visibleElements - gap;
   const calcString = "calc(" + widthPercentege + "% + " + widthGap + "px)";
 
-  const buttonsWithGap = noGap ? "relative" : "relative px-[52px]" 
+  const buttonsWithGap = `relative px-[${gap + 32}px]`;
+
+  const divClassName = `
+  grid
+  grid-flow-col
+  grid-cols-[repeat(${elementsTotal},_1fr)]
+  gap-x-[${gap}px]
+  transition ease-in-out duration-[800ms] transform`;
 
   return (
-      <div className={buttonsWithGap}>
-        <div
-          className={`
-          grid
-          grid-flow-col
-          grid-cols-[repeat(${elementsTotal}, 1fr)]
-          ${noGap ? "0" : "gap-x-[20px]"}
-          transition ease-in-out duration-[800ms] transform
-          `}
-          style={{
-            width: calcString,
-            transform: `translateX(calc((-${
-              (100 * visibleElements) / elementsTotal
-            }% - ${
-              (noGap ? 0 : 20 * (visibleElements / elementsTotal))
-            }px) * ${currentPage})`,
-          }}
-        >
-          {children}
-        </div>
-        {showButtons && (
-          <>
-            <div
-              className="
+    <div className={buttonsWithGap}>
+      <div
+        className={divClassName}
+        style={{
+          width: calcString,
+          transform: `translateX(calc((-${
+            (100 * visibleElements) / elementsTotal
+          }% - ${
+            noGap ? 0 : 20 * (visibleElements / elementsTotal)
+          }px) * ${currentPage})`,
+        }}
+      >
+        {children}
+      </div>
+      {showButtons && (
+        <>
+          <div
+            className="
           absolute 
           left-0 
           top-0 
@@ -101,12 +103,12 @@ const Carousel = ({
           hover:bg-[#131313]
 
           "
-              onClick={() => changePage(ACTIONS.PREVIOUS)}
-            >
-              <FaArrowLeft color="white" />
-            </div>
-            <div
-              className="
+            onClick={() => changePage(ACTIONS.PREVIOUS)}
+          >
+            <FaArrowLeft color="white" />
+          </div>
+          <div
+            className="
         absolute 
         right-0 
         top-0 
@@ -121,13 +123,13 @@ const Carousel = ({
         bg-[#1f1f1f]
         hover:bg-[#131313]
         "
-              onClick={() => changePage(ACTIONS.NEXT)}
-            >
-              <FaArrowRight color="white" />
-            </div>
-          </>
-        )}
-      </div>
+            onClick={() => changePage(ACTIONS.NEXT)}
+          >
+            <FaArrowRight color="white" />
+          </div>
+        </>
+      )}
+    </div>
   );
 };
 
