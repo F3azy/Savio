@@ -9,7 +9,7 @@ const Navbar = () => {
       w-full max-h-[68px] flex justify-between 
     px-[16px] 2xl:px-[340px] 
     py-[12px] 2xl:py-[16px]
-    sticky top-0
+    sticky top-0 z-[9999]
     bg-blue-50
      "
     >
