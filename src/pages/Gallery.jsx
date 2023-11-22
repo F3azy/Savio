@@ -51,8 +51,9 @@ const Gallery = () => {
                 translate-y-[-50%] 
                 translate-x-[50%]
                 cursor-pointer
+                text-violet-400
+                hover:text-brand-secondary
                 "
-                  fill="#9361FF"
                   size={70}
                   onClick={() => {
                     setModalVideo(YTVideos[idx]);
