@@ -25,21 +25,23 @@ const Gallery = () => {
     <div className="flex flex-col gap-y-[36px] py-2">
       <div className="flex flex-col gap-y-[8px]">
         <h3 className="text-[24px] font-bold">Video</h3>
-        <div className="mx-[-340px] overflow-x-hidden">
+        <div>
           <Carousel
             elementsTotal={YTThumbnail.length}
             visibleElements={3}
             carouselTitle="Video"
             gap={20}
+            gapClass="gap-x-[20px]"
+            gridColTem={"grid-cols-[repeat("+YTThumbnail.length+",_1fr)]"}
           >
             {YTThumbnail.map((thumbnail, idx) => (
-              <div key={idx} className="overflow-hidden relative rounded-3xl">
+              <div key={idx} className="overflow-hidden relative rounded-xl">
                 <img
                   className="my-[-10%] w-full"
                   src={thumbnail}
                   alt={"Video " + idx + 1}
                 />
-                <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-black bg-opacity-50" />
                 <FaPlay
                   className="
                 absolute 
