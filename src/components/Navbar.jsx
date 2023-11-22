@@ -25,8 +25,8 @@ const Navbar = () => {
         <img className="w-[100px]" src={SavioLogo} alt="logo" />
       </Link>
       <div
-        className="flex flex-wrap 
-      content-center 
+        className="flex
+      items-center
       gap-x-6 2xl:gap-x-16 
       font-semibold 
       tracking-wide

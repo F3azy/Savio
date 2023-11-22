@@ -4,8 +4,8 @@ import { HomeCarouselImages } from "../assets/Carousel_Images";
 
 const Hero = () => {
   return (
-    <div className="flex justify-between content-center gap-x-5 py-16">
-      <div className="flex-[0.5] flex flex-col justify-center gap-y-6">
+    <div className="flex justify-between items-center gap-x-5 py-16">
+      <div className="flex-[0.5]">
         <h2 className="leading-[1.2] text-6xl">
           <p
             className="
@@ -39,6 +39,7 @@ const Hero = () => {
         tracking-wider
         text-justify
         font-medium
+        pt-6
         "
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
