@@ -11,3 +11,15 @@
 body, html {
     background-color: theme('colors.blue.50');
 }
+
+
+.footer-gradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 50%;
+  bottom: 0;
+  z-index: 0;
+  background: theme('colors.brand.secondary');
+  filter: blur(150px);
+}
