@@ -12,6 +12,8 @@ const Carousel = ({
   visibleElements,
   showButtons = true,
   gap = 0,
+  gapClass = "gap-x-0",
+  gridColTem = "grid-cols-[repeat(0,_1fr)]",
   animate,
   children,
 }) => {
@@ -43,10 +45,6 @@ const Carousel = ({
     return () => clearTimeout(timer);
   }, [clicked]);
 
-  // useEffect(() => {
-  //   setCurrentPage(0);
-  // }, [children]);
-
   useInterval(
     () => {
       changePage(ACTIONS.NEXT);
@@ -55,76 +53,67 @@ const Carousel = ({
   );
 
   const widthPercentege = (100 * elementsTotal) / visibleElements;
-  const widthGap =
-    (gap * elementsTotal) / visibleElements - gap;
+  const widthGap = (gap * elementsTotal) / visibleElements - gap;
   const calcString = "calc(" + widthPercentege + "% + " + widthGap + "px)";
-
-  const buttonsWithGap = `relative px-[${gap + 32}px]`;
 
   const divClassName = `
   grid
   grid-flow-col
-  grid-cols-[repeat(${elementsTotal},_1fr)]
-  gap-x-[${gap}px]
+  ${gridColTem + " " + gapClass}
   transition ease-in-out duration-[800ms] transform`;
 
   return (
-    <div className={buttonsWithGap}>
-      <div
-        className={divClassName}
-        style={{
-          width: calcString,
-          transform: `translateX(calc((-${
-            (100 * visibleElements) / elementsTotal
-          }% - ${
-            gap * (visibleElements / elementsTotal)
-          }px) * ${currentPage})`,
-        }}
-      >
-        {children}
+    <div className="relative">
+      <div className="overflow-x-hidden">
+        <div
+          className={divClassName}
+          style={{
+            width: calcString,
+            transform: `translateX(calc((-${
+              (100 * visibleElements) / elementsTotal
+            }% - ${
+              gap * (visibleElements / elementsTotal)
+            }px) * ${currentPage})`,
+          }}
+        >
+          {children}
+        </div>
       </div>
       {showButtons && (
         <>
           <div
             className="
           absolute 
-          left-0 
+          -left-8 
           top-0 
           z-10 
-          cursor-pointer
           h-full
           flex
-          flex-wrap
-          content-center
-          px-2
-          rounded-r-xl
-          bg-[#1f1f1f]
-          hover:bg-[#131313]
-
+          items-center
           "
-            onClick={() => changePage(ACTIONS.PREVIOUS)}
           >
-            <FaArrowLeft color="white" />
+            <FaArrowLeft
+              className="cursor-pointer hover:text-brand-secondary"
+              size={25}
+              onClick={() => changePage(ACTIONS.PREVIOUS)}
+            />
           </div>
           <div
             className="
         absolute 
-        right-0 
+        -right-8
         top-0 
         z-10 
-        cursor-pointer
         h-full
         flex
-        flex-wrap
-        content-center
-        px-2
-        rounded-l-xl
-        bg-[#1f1f1f]
-        hover:bg-[#131313]
+        items-center
         "
-            onClick={() => changePage(ACTIONS.NEXT)}
           >
-            <FaArrowRight color="white" />
+            <FaArrowRight
+              className="cursor-pointer hover:text-brand-secondary"
+              size={25}
+              onClick={() => changePage(ACTIONS.NEXT)}
+            />
           </div>
         </>
       )}
