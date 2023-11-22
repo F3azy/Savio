@@ -10,7 +10,7 @@ const About = () => {
         text-[14px] 
       "
       >
-        | O nas
+        | O Nas
       </h3>
       <p
         className="
