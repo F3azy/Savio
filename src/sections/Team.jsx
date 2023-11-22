@@ -4,7 +4,11 @@ import Image1 from "../assets/Carousel_Images/Image1.png";
 
 const Team = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-y-6 py-14">
+    <section className="w-full 
+    flex flex-col items-center gap-y-6 
+    py-14 
+    relative z-10
+    ">
       <h3
         className="
         font-normal 

@@ -13,13 +13,50 @@ body, html {
 }
 
 
+.gradient-1 {
+  position: absolute;
+  width: 200px;
+  height: 438px;
+
+  background: rgb(0, 221, 250);
+  filter: blur(190px);
+}
+
+.gradient-2 {
+  position: absolute;
+  width: 400px;
+  height: 800px;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-3 {
+  position: absolute;
+  width: 300px;
+  height: 50vh;
+
+  background: rgba(68, 0, 255, 0.75);
+  filter: blur(200px);
+  transform: rotate(-30deg);
+}
+
+.gradient-4 {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 217, 224)
+    rgb(78, 25, 201)
+  );
+}
+
 .footer-gradient {
   position: absolute;
   width: 500px;
-  height: 100px;
-  left: 50%;
+  height: 70px;
+  left: 33%;
   bottom: 0;
   z-index: 0;
   background: theme('colors.brand.secondary');
-  filter: blur(150px);
+  filter: blur(125px);
 }

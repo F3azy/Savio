@@ -7,8 +7,8 @@ const Navbar = () => {
   const scrollPosition = useScrollPosition();
   const backGround =
     scrollPosition > 0
-      ? "bg-opacity-60 backdrop-blur-md border-b-[1px] border-brand-secondary/20"
-      : "";
+      ? "bg-blue-50 bg-opacity-60 backdrop-blur-md border-b-[1px] border-brand-secondary/20"
+      : "bg-transparent";
 
   return (
     <nav
@@ -17,7 +17,6 @@ const Navbar = () => {
     px-[16px] 2xl:px-[340px] 
     py-[12px] 2xl:py-[16px]
     sticky top-0 z-[100]
-    bg-blue-50
     ${backGround}
      `}
     >

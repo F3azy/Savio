@@ -4,18 +4,18 @@ import { Footer, Navbar } from "../components";
 
 const Layout = () => {
   return (
-    <>
+    <div className="overflow-x-clip relative">
       <Navbar />
       <main
         className="
         px-[16px] 2xl:px-[340px] 
-        py-[12px] 2xl:py-[18px]
+        py-[12px] 2xl:py-[20px]
       "
       >
         <Outlet />
         <Footer />
       </main>
-    </>
+    </div>
   );
 };
 
