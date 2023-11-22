@@ -5,8 +5,8 @@ import { ScrollToTop } from "./components";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
-        {/* <ScrollToTop /> */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/galeria" element={<Gallery />} />
