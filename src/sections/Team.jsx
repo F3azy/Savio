@@ -1,6 +1,6 @@
 import React from "react";
-import TeamMemberCard from "../components/TeamMemberCard";
-import Image1 from '../assets/Carousel_Images/Image1.png'
+import { TeamMemberCard } from "../components";
+import Image1 from "../assets/Carousel_Images/Image1.png";
 
 const Team = () => {
   return (
@@ -14,22 +14,38 @@ const Team = () => {
         | Nasz Skład
       </h3>
       <div className="w-full grid grid-cols-2 gap-10">
-        <TeamMemberCard image={Image1} name={"Jan Kowalski"} desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
+        <TeamMemberCard
+          image={Image1}
+          name={"Jan Kowalski"}
+          desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.`} />
-        <TeamMemberCard image={Image1} name={"Jan Kowalski"} desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
+          scrambled it to make a type specimen book.`}
+        />
+        <TeamMemberCard
+          image={Image1}
+          name={"Jan Kowalski"}
+          desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.`} />
-        <TeamMemberCard image={Image1} name={"Jan Kowalski"} desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
+          scrambled it to make a type specimen book.`}
+        />
+        <TeamMemberCard
+          image={Image1}
+          name={"Jan Kowalski"}
+          desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.`} />
-        <TeamMemberCard image={Image1} name={"Jan Kowalski"} desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
+          scrambled it to make a type specimen book.`}
+        />
+        <TeamMemberCard
+          image={Image1}
+          name={"Jan Kowalski"}
+          desription={`          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.`} />
+          scrambled it to make a type specimen book.`}
+        />
       </div>
     </section>
   );

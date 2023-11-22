@@ -1,5 +1,5 @@
 import { HeroBlob } from "../assets";
-import Carousel from "../components/Carousel";
+import { Carousel } from "../components";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
 
 const Hero = () => {
@@ -82,7 +82,7 @@ const Hero = () => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Carousel from "../components/Carousel";
+import { Carousel, Modal } from "../components";
 import { FaPlay } from "react-icons/fa";
 import { YTThumbnail, YTVideos } from "../constans";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
-import Modal from "../components/Modal";
 import { useDisclosure } from "../hooks/useDisclosure";
 
 const Gallery = () => {
@@ -32,7 +31,7 @@ const Gallery = () => {
             carouselTitle="Video"
             gap={20}
             gapClass="gap-x-[20px]"
-            gridColTem={"grid-cols-[repeat("+YTThumbnail.length+",_1fr)]"}
+            gridColTem={"grid-cols-[repeat(" + YTThumbnail.length + ",_1fr)]"}
           >
             {YTThumbnail.map((thumbnail, idx) => (
               <div key={idx} className="overflow-hidden relative rounded-xl">
@@ -165,14 +164,14 @@ const Gallery = () => {
         w-[60vw]
         "
         >
-            <iframe
-              className="w-full aspect-video"
-              src={modalVideo}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+          <iframe
+            className="w-full aspect-video"
+            src={modalVideo}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </Modal>
     </div>
