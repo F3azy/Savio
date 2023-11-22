@@ -4,7 +4,7 @@ import { HomeCarouselImages } from "../assets/Carousel_Images";
 
 const Hero = () => {
   return (
-    <section className="flex justify-between items-center gap-x-5 py-12">
+    <section className="flex justify-between items-center gap-x-5 py-14">
       <div className="flex-[0.5]">
         <h2 className="leading-[1.2] text-6xl">
           <p

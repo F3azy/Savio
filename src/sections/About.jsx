@@ -3,7 +3,7 @@ import { FaArrowDownLong } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-y-2 py-12">
+    <section className="w-full flex flex-col items-center gap-y-2 py-14">
       <h3
         className="
         font-normal 
