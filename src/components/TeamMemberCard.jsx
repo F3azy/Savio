@@ -2,10 +2,9 @@ import React from "react";
 
 const TeamMemberCard = ({ image, name, desription }) => {
   return (
-    <div className="flex gap-x-4 bg-[#FCFCFC]">
-      <img src={image} alt={"Zdjecie " + name} />
-      <div className="border-l-2 my-5 border-brand-primary/30" />
-      <div className="my-5 pr-4 flex flex-col gap-3">
+    <div className="flex rounded-lg overflow-hidden bg-[#FCFCFC]">
+    <img src={image} alt={"Zdjecie " + name} />
+      <div className="p-4 flex flex-col gap-2">
         <h4 className="font-semibold text-xl">{name}</h4>
         <p
           className="        
@@ -21,5 +20,6 @@ const TeamMemberCard = ({ image, name, desription }) => {
     </div>
   );
 };
+
 
 export default TeamMemberCard;
