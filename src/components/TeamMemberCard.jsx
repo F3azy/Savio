@@ -1,13 +1,25 @@
-const TeamMemberCard = ({ image, name, desription }) => {
+const TeamMemberCard = ({ image, name, positions, desription }) => {
   return (
     <div className="flex rounded-lg overflow-hidden bg-[#FCFCFC]">
-    <img src={image} alt={"Zdjecie " + name} />
-      <div className="p-4 flex flex-col gap-2">
-        <h4 className="font-semibold text-xl">{name}</h4>
+      <img src={image} alt={"Zdjecie " + name} />
+      <div className="p-4 flex flex-col gap-3">
+        <div className="flex flex-col">
+          <h4 className="font-semibold tracking-wide text-xl">{name}</h4>
+          <p
+            className="        
+          text-neutral-500 
+          tracking-wider
+          font-medium
+          text-justify
+          "
+          >
+            {positions}
+          </p>
+        </div>
         <p
           className="        
-        text-neutral-900 
-        tracking-wide
+        text-neutral-800 
+        tracking-wider
         font-medium
         text-justify
         "
@@ -18,6 +30,5 @@ const TeamMemberCard = ({ image, name, desription }) => {
     </div>
   );
 };
-
 
 export default TeamMemberCard;
