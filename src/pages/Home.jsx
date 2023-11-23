@@ -1,5 +1,6 @@
 import React from "react";
 import { Hero, About, Team } from "../sections";
+import Contact from "../sections/Contact";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       </div>
       <div className="relative">
         <Team />
+        <Contact />
         <div className="gradient-3 bottom-[10%] right-0" />
       </div>
     </>
