@@ -5,6 +5,7 @@ const Contact = () => {
         className="
         font-normal 
         text-[14px] 
+        tracking-widest
       "
       >
         | Kontakt

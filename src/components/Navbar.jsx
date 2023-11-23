@@ -27,7 +27,7 @@ const Navbar = () => {
       items-center
       gap-x-6 2xl:gap-x-16 
       font-semibold 
-      tracking-wide
+      tracking-wider
       text-neutral-900
       "
       >

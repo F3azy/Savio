@@ -12,6 +12,7 @@ const Team = () => {
         className="
         font-normal 
         text-[14px] 
+        tracking-widest
       "
       >
         | Nasz Skład

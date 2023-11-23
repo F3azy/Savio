@@ -24,7 +24,7 @@ const Gallery = () => {
     <div className="flex flex-col gap-y-[36px] py-2">
       <div className="flex flex-col gap-y-[8px] relative">
         <div className="gradient-4 left-[-37%] bottom-0" />
-        <h3 className="text-[24px] font-bold relative z-10">Video</h3>
+        <h3 className="text-[24px] font-bold tracking-wider relative z-10">Video</h3>
         <div className="relative z-10">
           <Carousel
             elementsTotal={YTThumbnail.length}
@@ -69,7 +69,7 @@ const Gallery = () => {
         <div className="gradient-1 left-[-10%] top-[50%]" />
         <div className="gradient-2 right-[-35%] top-0" />
         <div className="gradient-5 bottom-0 left-[70%]" />
-        <h3 className="text-[24px] font-bold relative z-10">Zdjęcia</h3>
+        <h3 className="text-[24px] font-bold tracking-wider relative z-10">Zdjęcia</h3>
         <div
           className="grid
           grid-cols-[repeat(4,_1fr)]

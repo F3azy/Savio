@@ -12,7 +12,7 @@ const Footer = () => {
     "
     >
       <img className="w-[100px]" src={SavioLogo} alt="logo" />
-      <p className="font-semibold text-[16px]">
+      <p className="font-semibold tracking-wider">
         Copyright © {new Date().getFullYear()} Savio. Wszelkie prawa
         zastrzeżone.
       </p>

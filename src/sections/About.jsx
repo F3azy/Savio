@@ -7,6 +7,7 @@ const About = () => {
         className="
         font-normal 
         text-[14px] 
+        tracking-widest
       "
       >
         | O Nas
@@ -19,7 +20,7 @@ const About = () => {
         tracking-wide
         text-center
         font-normal
-        text-[20px]
+        text-xl
         "
       >
         Lorem Ipsum is simply dummy text of the printing and typesetting

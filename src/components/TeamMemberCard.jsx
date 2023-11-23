@@ -4,11 +4,11 @@ const TeamMemberCard = ({ image, name, positions, desription }) => {
       <img src={image} alt={"Zdjecie " + name} />
       <div className="p-4 flex flex-col gap-3">
         <div className="flex flex-col">
-          <h4 className="font-semibold tracking-wide text-xl">{name}</h4>
+          <h4 className="font-semibold tracking-wider text-xl">{name}</h4>
           <p
             className="        
           text-neutral-500 
-          tracking-wider
+          tracking-widest
           font-medium
           text-justify
           "

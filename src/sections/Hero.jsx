@@ -6,16 +6,10 @@ const Hero = () => {
   return (
     <section className="flex justify-between items-center gap-x-5 py-14">
       <div className="flex-[0.5]">
-        <h2 className="leading-[1.2] text-6xl">
+        <h2 className="leading-[1.1] text-6xl font-bold">
+          <p className="text-brand-secondary">Zespół Muzyczny</p>
           <p
             className="
-          font-bold text-brand-secondary"
-          >
-            Zespół Muzyczny
-          </p>
-          <p
-            className="
-          font-bold 
           w-min
           relative
           z-10
@@ -34,11 +28,10 @@ const Hero = () => {
         </h2>
         <p
           className="
-        text-neutral-600 
+        text-neutral-700 
         leading-[1.5] 
-        tracking-wider
+        tracking-widest
         text-justify
-        font-medium
         pt-6
         "
         >
