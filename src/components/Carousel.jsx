@@ -60,7 +60,7 @@ const Carousel = ({
   grid
   grid-flow-col
   ${gridColTem + " " + gapClass}
-  transition ease-in-out duration-[800ms] transform`;
+  transition ease-in-out duration-[800ms]`;
 
   return (
     <div className="relative">

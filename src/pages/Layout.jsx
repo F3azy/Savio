@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../components";
 
 const Layout = () => {
   return (
-    <div className="overflow-x-clip relative">
+    <div className="overflow-x-clip">
       <Navbar />
       <main
         className="

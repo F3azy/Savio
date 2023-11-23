@@ -43,12 +43,30 @@ body, html {
 }
 
 .gradient-4 {
-  background: linear-gradient(
-    180deg,
-    rgba(10, 217, 224)
-    rgb(78, 25, 201)
-  );
-}
+  position: absolute;
+  width: 300px;
+  height: 50vh;
+  
+  background-image: linear-gradient(
+    rgb(0, 47, 255)0%,
+    rgb(92, 122, 255)20%,
+    rgba(10, 217, 224)40%,
+    rgb(192, 114, 255)60%,
+    rgb(156, 10, 224)80%,
+    rgb(78, 25, 201)100%
+    );
+    opacity: 0.8;
+    filter: blur(150px);
+  }
+
+  .gradient-5 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  
+    background: rgba(0, 81, 255, 0.8);
+    filter: blur(200px);
+  }
 
 .footer-gradient {
   position: absolute;

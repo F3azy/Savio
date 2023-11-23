@@ -22,9 +22,10 @@ const Gallery = () => {
 
   return (
     <div className="flex flex-col gap-y-[36px] py-2">
-      <div className="flex flex-col gap-y-[8px]">
-        <h3 className="text-[24px] font-bold">Video</h3>
-        <div>
+      <div className="flex flex-col gap-y-[8px] relative">
+        <div className="gradient-4 left-[-37%] bottom-0" />
+        <h3 className="text-[24px] font-bold relative z-10">Video</h3>
+        <div className="relative z-10">
           <Carousel
             elementsTotal={YTThumbnail.length}
             visibleElements={3}
@@ -64,12 +65,18 @@ const Gallery = () => {
           </Carousel>
         </div>
       </div>
-      <div className="flex flex-col gap-y-[8px]">
-        <h3 className="text-[24px] font-bold">Zdjęcia</h3>
+      <div className="flex flex-col gap-y-[8px] relative">
+        <div className="gradient-1 left-[-10%] top-[50%]" />
+        <div className="gradient-2 right-[-35%] top-0" />
+        <div className="gradient-5 bottom-0 left-[70%]" />
+        <h3 className="text-[24px] font-bold relative z-10">Zdjęcia</h3>
         <div
           className="grid
           grid-cols-[repeat(4,_1fr)]
-          gap-6"
+          gap-6
+          relative
+          z-10
+          "
         >
           {HomeCarouselImages.map((image, idx) => (
             <div
@@ -79,6 +86,9 @@ const Gallery = () => {
             overflow-hidden 
             cursor-pointer 
             shadow-[2px_12px_20px_#1f1f1f60]
+            transition ease-in-out duration-[300ms]
+            hover:-translate-y-2
+            hover:shadow-[12px_16px_20px_#1f1f1f99]
             "
               onClick={() => {
                 setModalImage(image);
@@ -96,6 +106,9 @@ const Gallery = () => {
             overflow-hidden 
             cursor-pointer 
             shadow-[2px_12px_20px_#1f1f1f60]
+            transition ease-in-out duration-[300ms]
+            hover:-translate-y-2
+            hover:shadow-[12px_16px_20px_#1f1f1f99]
             "
               onClick={() => {
                 setModalImage(image);
@@ -113,6 +126,9 @@ const Gallery = () => {
             overflow-hidden 
             cursor-pointer 
             shadow-[2px_12px_20px_#1f1f1f60]
+            transition ease-in-out duration-[300ms]
+            hover:-translate-y-2
+            hover:shadow-[12px_16px_20px_#1f1f1f99]
             "
               onClick={() => {
                 setModalImage(image);
@@ -130,6 +146,9 @@ const Gallery = () => {
             overflow-hidden 
             cursor-pointer 
             shadow-[2px_12px_20px_#1f1f1f60]
+            transition ease-in-out duration-[300ms]
+            hover:-translate-y-2
+            hover:shadow-[12px_16px_20px_#1f1f1f99]
             "
               onClick={() => {
                 setModalImage(image);
@@ -139,6 +158,7 @@ const Gallery = () => {
               <img className="w-full" src={image} alt={"Image" + 1} />
             </div>
           ))}
+
         </div>
       </div>
 
