@@ -1,4 +1,3 @@
-import React from "react";
 import { SavioLogo } from "../assets";
 import { footerSocialIcons } from "../constans";
 

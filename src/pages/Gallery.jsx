@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Carousel, Modal } from "../components";
 import { FaPlay } from "react-icons/fa";
 import { YTThumbnail, YTVideos } from "../constans";

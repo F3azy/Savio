@@ -1,4 +1,3 @@
-import React from "react";
 import { TeamMemberCard } from "../components";
 import Image1 from "../assets/Carousel_Images/Image1.png";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 const TeamMemberCard = ({ image, name, desription }) => {
   return (
     <div className="flex rounded-lg overflow-hidden bg-[#FCFCFC]">

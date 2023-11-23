@@ -1,4 +1,3 @@
-import React from "react";
 import { Hero, About, Team, Contact } from "../sections";
 
 const Home = () => {

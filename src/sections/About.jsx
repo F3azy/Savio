@@ -1,4 +1,3 @@
-import React from "react";
 import { FaArrowDownLong } from "react-icons/fa6";
 
 const About = () => {
