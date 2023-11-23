@@ -12,7 +12,8 @@ const Home = () => {
       <div className="relative">
         <Team />
         <Contact />
-        <div className="gradient-3 bottom-[10%] right-0" />
+        <div className="gradient-3 bottom-[0] right-[5%]" />
+        <div className="gradient-5 top-[10%] right-[-10%] opacity-60" />
       </div>
     </>
   );

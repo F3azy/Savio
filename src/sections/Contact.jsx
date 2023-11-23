@@ -1,6 +1,9 @@
+import{ ContactCard } from "../components";
+import { contacts } from "../constans";
+
 const Contact = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-y-2 py-14">
+    <section className="w-full flex flex-col items-center gap-y-8 pt-14 relative z-10">
       <h3
         className="
         font-normal 
@@ -10,8 +13,10 @@ const Contact = () => {
       >
         | Kontakt
       </h3>
-      <div>
-        
+      <div className=" w-full grid grid-cols-2 gap-10">
+        {contacts.map((contact) =>
+          <ContactCard key={contact.name} Icon={contact.icon} value={contact.value} name={contact.name} />
+        )}
       </div>
     </section>
   )
