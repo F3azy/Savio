@@ -2,7 +2,7 @@ const ContactCard = ({ Icon, value, name }) => {
   return (
     <div
       className={`
-    ${name==="location" ? "md:col-span-2 p-1" : "p-8"}
+    ${name === "location" ? "md:col-span-2 p-1" : "py-10"}
     relative 
     border-2
     rounded-lg
@@ -11,12 +11,15 @@ const ContactCard = ({ Icon, value, name }) => {
     >
       <div
         className="
-      p-2
+        p-3
+      flex
+      justify-center
+      items-center
       rounded-full
       border-2
       border-brand-secondary/30
       absolute 
-      -top-[32px] 
+      -top-[34px] 
       left-[50%]
       translate-x-[-50%]
       bg-[#FCFCFC]
