@@ -2,7 +2,7 @@ const ContactCard = ({ Icon, value, name }) => {
   return (
     <div
       className={`
-    ${name==="location" ? "col-span-2 p-1" : "p-8"}
+    ${name==="location" ? "md:col-span-2 p-1" : "p-8"}
     relative 
     border-2
     rounded-lg

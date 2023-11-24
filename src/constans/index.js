@@ -1,5 +1,23 @@
 //gallery const
 const YTVideos = [
+  "https://www.youtube.com/watch/u1kDmE2Ou3I",
+  "https://www.youtube.com/watch/PfqsHIITt8c",
+  "https://www.youtube.com/watch/KxVqCoKfujU",
+  "https://www.youtube.com/watch/yCWpOTJIXzM",
+  "https://www.youtube.com/watch/ToFWx29MZzs",
+  "https://www.youtube.com/watch/K9CWddpjq1E",
+  "https://www.youtube.com/watch/ZUTLz8hPYJs",
+  "https://www.youtube.com/watch/BiVdV2tFOZw",
+  "https://www.youtube.com/watch/heF1N3B9SPM",
+  "https://www.youtube.com/watch/ksWY6Kfa7qE",
+  "https://www.youtube.com/watch/ChuwrrY0gtk",
+  "https://www.youtube.com/watch/GfAKAqbyVXc",
+  "https://www.youtube.com/watch/RCmoQ80J6m4",
+  "https://www.youtube.com/watch/b3qisotgfmc",
+  "https://www.youtube.com/embed/LRoq10n8DOo",
+];
+
+const YTModalVideos = [
   "https://www.youtube.com/embed/u1kDmE2Ou3I",
   "https://www.youtube.com/embed/PfqsHIITt8c",
   "https://www.youtube.com/embed/KxVqCoKfujU",
@@ -35,7 +53,7 @@ const YTThumbnail = [
   "http://img.youtube.com/vi/LRoq10n8DOo/0.jpg",
 ];
 
-export { YTThumbnail, YTVideos };
+export { YTThumbnail, YTVideos, YTModalVideos };
 
 // footer const
 import { FaFacebook, FaYoutube } from "react-icons/fa";

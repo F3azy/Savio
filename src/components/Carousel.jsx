@@ -11,6 +11,7 @@ const Carousel = ({
   elementsTotal,
   visibleElements,
   showButtons = true,
+  isScrollable = false,
   gap = 0,
   gapClass = "gap-x-0",
   gridColTem = "grid-cols-[repeat(0,_1fr)]",
@@ -64,7 +65,7 @@ const Carousel = ({
 
   return (
     <div className="relative">
-      <div className="overflow-x-hidden">
+      <div className={isScrollable ? "overflow-x-scroll xl:overflow-x-hidden" : "overflow-x-hidden"}>
         <div
           className={divClassName}
           style={{
@@ -83,12 +84,13 @@ const Carousel = ({
         <>
           <div
             className="
+           hidden
           absolute 
           -left-8 
           top-0 
           z-10 
           h-full
-          flex
+          xl:flex
           items-center
           "
           >
@@ -100,12 +102,13 @@ const Carousel = ({
           </div>
           <div
             className="
+            hidden
         absolute 
         -right-8
         top-0 
         z-10 
         h-full
-        flex
+        xl:flex
         items-center
         "
           >

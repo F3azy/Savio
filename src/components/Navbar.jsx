@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav
       className={`
       w-full max-h-[68px] flex justify-between 
-    px-[16px] 2xl:px-[340px] 
+      px-[16px] xl:px-[100px] 2xl:px-[300px] 
     py-[12px] 2xl:py-[16px]
     sticky top-0 z-[100]
     ${backGround}

@@ -4,9 +4,12 @@ import { HomeCarouselImages } from "../assets/Carousel_Images";
 
 const Hero = () => {
   return (
-    <section className="flex justify-between items-center gap-x-5 py-14">
+    <section className="
+    flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-10
+    py-3 lg:py-14 2xl:py-12
+    ">
       <div className="flex-[0.5]">
-        <h2 className="leading-[1.1] text-6xl font-bold">
+        <h2 className="leading-[1.1] text-4xl md:text-6xl font-bold">
           <p className="text-brand-secondary">Zespół Muzyczny</p>
           <p
             className="
@@ -19,7 +22,7 @@ const Hero = () => {
           before:left-0
           before:-z-10
           before:w-full
-          before:h-5
+          before:h-3 lg:before:h-5
           before:bg-brand-secondary
           "
           >
@@ -41,10 +44,11 @@ const Hero = () => {
           scrambled it to make a type specimen book.
         </p>
       </div>
-      <div className="flex-[0.4] relative">
+      <div className="md:w-[60%] lg:w-full flex-[0.4] relative">
         <div
           className="
-        w-[75%]
+        w-[90%] lg:w-[75%]
+        m-auto lg:m-0
         overflow-hidden
         rounded-xl 
         shadow-[8px_16px_25px_#1f1f1f99]
@@ -66,8 +70,8 @@ const Hero = () => {
         <img
           className="
           absolute
-          right-0
-          top-16
+          -right-16 md:-right-24 lg:right-0
+          -bottom-28
           z-10     
           "
           src={HeroBlob}

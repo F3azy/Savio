@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel, Modal } from "../components";
 import { FaPlay } from "react-icons/fa";
-import { YTThumbnail, YTVideos } from "../constans";
+import { YTThumbnail, YTVideos, YTModalVideos } from "../constans";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
 import { useDisclosure } from "../hooks/useDisclosure";
 
@@ -19,17 +19,44 @@ const Gallery = () => {
 
   const [modalImage, setModalImage] = useState("");
   const [modalVideo, setModalVideo] = useState("");
+  const [visibleElements, setVisibleElements] = useState(3);
+  const [YTExternal, setYTExternal] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setVisibleElements(3);
+        setYTExternal(false);
+      } else if (window.innerWidth >= 768) {
+        setVisibleElements(2.5);
+        setYTExternal(true);
+      } else {
+        setVisibleElements(1.5);
+        setYTExternal(true);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col gap-y-[36px] py-2">
       <div className="flex flex-col gap-y-[8px] relative">
-        <div className="gradient-4 left-[-37%] bottom-0" />
-        <h3 className="text-[24px] font-bold tracking-wider relative z-10">Video</h3>
+        <div className="gradient-4 xl:left-[-37%] xl:bottom-0" />
+        <h3 className="text-[24px] font-bold tracking-wider relative z-10">
+          Video
+        </h3>
         <div className="relative z-10">
           <Carousel
             elementsTotal={YTThumbnail.length}
-            visibleElements={3}
-            carouselTitle="Video"
+            visibleElements={visibleElements}
+            isScrollable={true}
             gap={20}
             gapClass="gap-x-[20px]"
             gridColTem={"grid-cols-[repeat(" + YTThumbnail.length + ",_1fr)]"}
@@ -53,11 +80,16 @@ const Gallery = () => {
                 cursor-pointer
                 text-violet-400
                 hover:text-brand-secondary
+                w-[40px] md:w-[70px]
+                h-[40px] md:h-[70px]
                 "
-                  size={70}
                   onClick={() => {
-                    setModalVideo(YTVideos[idx]);
-                    onVideoOpen();
+                    if (YTExternal)
+                      window.open(YTVideos[idx], "_blank");
+                    else {
+                      setModalVideo(YTModalVideos[idx]);
+                      onVideoOpen();
+                    }
                   }}
                 />
               </div>
@@ -66,13 +98,15 @@ const Gallery = () => {
         </div>
       </div>
       <div className="flex flex-col gap-y-[8px] relative">
-        <div className="gradient-1 left-[-10%] top-[50%]" />
-        <div className="gradient-2 right-[-35%] top-0" />
+        <div className="gradient-1 xl:left-[-10%] top-[50%]" />
+        <div className="gradient-2 right-[0] xl:right-[-35%] top-0" />
         <div className="gradient-5 bottom-0 left-[70%]" />
-        <h3 className="text-[24px] font-bold tracking-wider relative z-10">Zdjęcia</h3>
+        <h3 className="text-[24px] font-bold tracking-wider relative z-10">
+          Zdjęcia
+        </h3>
         <div
           className="grid
-          grid-cols-[repeat(4,_1fr)]
+          grid-cols-2 md:grid-cols-3 lg:grid-cols-4
           gap-6
           relative
           z-10
@@ -158,7 +192,6 @@ const Gallery = () => {
               <img className="w-full" src={image} alt={"Image" + 1} />
             </div>
           ))}
-
         </div>
       </div>
 
@@ -188,9 +221,9 @@ const Gallery = () => {
             className="w-full aspect-video"
             src={modalVideo}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </Modal>
