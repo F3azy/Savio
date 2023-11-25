@@ -57,7 +57,7 @@ export const zoomIn = (duration, delay) => {
         type: "tween",
         ...(delay && { delay: delay }),
         duration: duration,
-        ease: "easeOut",
+        ease: "linear",
       },
     },
   };
@@ -93,10 +93,12 @@ export const textContainer = {
 export const textVariant = {
   hidden: {
     opacity: 0,
-    y: 20,
+    x:0,
+    y: 100,
   },
   visible: {
     opacity: 1,
+    x:0,
     y: 0,
     transition: {
       type: "tween",
