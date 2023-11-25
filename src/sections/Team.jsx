@@ -1,13 +1,17 @@
 import { TeamMemberCard } from "../components";
 import Image1 from "../assets/Carousel_Images/Image1.png";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../utils/motion";
 
 const Team = () => {
   return (
-    <section className="w-full 
+    <section
+      className="w-full 
     flex flex-col items-center gap-y-14 
     lg:py-14 2xl:py-12
     relative z-10
-    ">
+    "
+    >
       <h3
         className="
         font-normal 
@@ -17,11 +21,17 @@ const Team = () => {
       >
         | Nasz Skład
       </h3>
-      <div className="w-full 
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer(0.5, 0.5)}
+        className="w-full 
       grid 
       md:grid-cols-2 xl:grid-cols-4 
       gap-y-16 md:gap-x-8 xl:gap-x-5
-      ">
+      "
+      >
         <TeamMemberCard
           image={Image1}
           name={"Jan Kowalski"}
@@ -54,9 +64,7 @@ const Team = () => {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s.`}
         />
-
-
-      </div>
+      </motion.div>
     </section>
   );
 };
