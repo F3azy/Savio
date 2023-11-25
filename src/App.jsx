@@ -9,7 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="galeria" element={<Gallery />} />
+          <Route path="/galeria" element={<Gallery />} />
         </Route>
       </Routes>
     </BrowserRouter>
