@@ -9,7 +9,7 @@ const About = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(0.7, 2)}
+      variants={staggerContainer(0.7, 2.8)}
       className="w-full flex flex-col items-center gap-y-3 
     py-16 lg:py-14 2xl:py-12
     "
