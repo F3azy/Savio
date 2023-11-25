@@ -13,7 +13,7 @@ const Hero = () => {
     variants={staggerContainer(2, 0.3)}
       className="
     flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-10
-    py-3 lg:py-14 2xl:py-12
+    py-4 lg:py-14 2xl:py-12
     "
     >
       <motion.div
