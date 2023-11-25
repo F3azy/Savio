@@ -36,21 +36,21 @@ const YTModalVideos = [
 ];
 
 const YTThumbnail = [
-  "http://img.youtube.com/vi/u1kDmE2Ou3I/0.jpg",
-  "http://img.youtube.com/vi/PfqsHIITt8c/0.jpg",
-  "http://img.youtube.com/vi/KxVqCoKfujU/0.jpg",
-  "http://img.youtube.com/vi/yCWpOTJIXzM/0.jpg",
-  "http://img.youtube.com/vi/ToFWx29MZzs/0.jpg",
-  "http://img.youtube.com/vi/K9CWddpjq1E/0.jpg",
-  "http://img.youtube.com/vi/ZUTLz8hPYJs/0.jpg",
-  "http://img.youtube.com/vi/BiVdV2tFOZw/0.jpg",
-  "http://img.youtube.com/vi/heF1N3B9SPM/0.jpg",
-  "http://img.youtube.com/vi/ksWY6Kfa7qE/0.jpg",
-  "http://img.youtube.com/vi/ChuwrrY0gtk/0.jpg",
-  "http://img.youtube.com/vi/GfAKAqbyVXc/0.jpg",
-  "http://img.youtube.com/vi/RCmoQ80J6m4/0.jpg",
-  "http://img.youtube.com/vi/b3qisotgfmc/0.jpg",
-  "http://img.youtube.com/vi/LRoq10n8DOo/0.jpg",
+  "https://img.youtube.com/vi/u1kDmE2Ou3I/0.jpg",
+  "https://img.youtube.com/vi/PfqsHIITt8c/0.jpg",
+  "https://img.youtube.com/vi/KxVqCoKfujU/0.jpg",
+  "https://img.youtube.com/vi/yCWpOTJIXzM/0.jpg",
+  "https://img.youtube.com/vi/ToFWx29MZzs/0.jpg",
+  "https://img.youtube.com/vi/K9CWddpjq1E/0.jpg",
+  "https://img.youtube.com/vi/ZUTLz8hPYJs/0.jpg",
+  "https://img.youtube.com/vi/BiVdV2tFOZw/0.jpg",
+  "https://img.youtube.com/vi/heF1N3B9SPM/0.jpg",
+  "https://img.youtube.com/vi/ksWY6Kfa7qE/0.jpg",
+  "https://img.youtube.com/vi/ChuwrrY0gtk/0.jpg",
+  "https://img.youtube.com/vi/GfAKAqbyVXc/0.jpg",
+  "https://img.youtube.com/vi/RCmoQ80J6m4/0.jpg",
+  "https://img.youtube.com/vi/b3qisotgfmc/0.jpg",
+  "https://img.youtube.com/vi/LRoq10n8DOo/0.jpg",
 ];
 
 export { YTThumbnail, YTVideos, YTModalVideos };
