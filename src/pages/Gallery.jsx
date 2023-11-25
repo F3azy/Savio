@@ -45,7 +45,7 @@ const Gallery = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(2, 0.75)}
+      variants={staggerContainer(1.5, 0.75)}
       className="flex flex-col gap-y-[36px] py-2"
     >
       <motion.div
