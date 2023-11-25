@@ -1,6 +1,10 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+
 const ContactCard = ({ Icon, value, name }) => {
   return (
-    <div
+    <motion.div
+      variants={fadeIn("up", "", 0.5)}
       className={`
     ${name === "location" ? "md:col-span-2 p-1" : "py-10"}
     relative 
@@ -38,7 +42,7 @@ const ContactCard = ({ Icon, value, name }) => {
       ) : (
         <p className="text-xl tracking-wider text-center">{value}</p>
       )}
-    </div>
+    </motion.div>
   );
 };
 
