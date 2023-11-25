@@ -133,84 +133,24 @@ const Gallery = () => {
             <motion.div
               variants={zoomIn(0.3)}
               key={idx}
-              className="
-            rounded-lg 
-            overflow-hidden 
-            cursor-pointer 
-            shadow-[2px_12px_20px_#1f1f1f60]
-            transition ease-in-out duration-[300ms]
-            hover:-translate-y-2
-            hover:shadow-[12px_16px_20px_#1f1f1f99]
-            "
               onClick={() => {
                 setModalImage(image);
                 onImageOpen();
               }}
             >
-              <img className="w-full" src={image} alt={"Image" + 1} />
-            </motion.div>
-          ))}
-          {HomeCarouselImages.map((image, idx) => (
-            <motion.div
-              variants={zoomIn(0.3)}
-              key={idx}
-              className="
-            rounded-lg 
-            overflow-hidden 
-            cursor-pointer 
-            shadow-[2px_12px_20px_#1f1f1f60]
-            transition ease-in-out duration-[300ms]
-            hover:-translate-y-2
-            hover:shadow-[12px_16px_20px_#1f1f1f99]
-            "
-              onClick={() => {
-                setModalImage(image);
-                onImageOpen();
-              }}
-            >
-              <img className="w-full" src={image} alt={"Image" + 1} />
-            </motion.div>
-          ))}
-          {HomeCarouselImages.map((image, idx) => (
-            <motion.div
-              variants={zoomIn(0.3)}
-              key={idx}
-              className="
-            rounded-lg 
-            overflow-hidden 
-            cursor-pointer 
-            shadow-[2px_12px_20px_#1f1f1f60]
-            transition ease-in-out duration-[300ms]
-            hover:-translate-y-2
-            hover:shadow-[12px_16px_20px_#1f1f1f99]
-            "
-              onClick={() => {
-                setModalImage(image);
-                onImageOpen();
-              }}
-            >
-              <img className="w-full" src={image} alt={"Image" + 1} />
-            </motion.div>
-          ))}
-          {HomeCarouselImages.map((image, idx) => (
-            <motion.div
-              variants={zoomIn(0.3)}
-              key={idx}
-              className="
-            rounded-lg 
-            overflow-hidden 
-            cursor-pointer 
-            shadow-[2px_12px_20px_#1f1f1f60]
-            transition ease-in-out duration-[300ms]
-            hover:-translate-y-2
-            hover:shadow-[12px_16px_20px_#1f1f1f99]
-            "
-              onClick={() => {
-                setModalImage(image);
-                onImageOpen();
-              }}
-            >
-              <img className="w-full" src={image} alt={"Image" + 1} />
+              <img
+                className="
+                w-full
+                cursor-pointer
+                rounded-lg 
+                shadow-[2px_12px_20px_#1f1f1f60]
+                transition ease-in-out duration-[300ms]
+                hover:-translate-y-2
+                hover:shadow-[12px_16px_20px_#1f1f1f99]
+              "
+                src={image}
+                alt={"Image" + 1}
+              />
             </motion.div>
           ))}
         </motion.div>
