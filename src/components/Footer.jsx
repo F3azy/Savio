@@ -9,7 +9,7 @@ const Footer = () => {
     initial="hidden"
     whileInView="visible"
     viewport={{once: true}}
-    variants={fadeIn("down", "", 0.5, 0.5, 50)}
+    variants={fadeIn("down", "", 0.5, 0.1, 50)}
     className="
     mt-10 md:mt-20 pt-5 md:pt-8 pb-3 
     flex flex-col gap-y-4 items-center 
