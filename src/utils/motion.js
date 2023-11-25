@@ -93,12 +93,10 @@ export const textContainer = {
 export const textVariant = {
   hidden: {
     opacity: 0,
-    x:0,
-    y: 100,
+    y: -20,
   },
   visible: {
     opacity: 1,
-    x:0,
     y: 0,
     transition: {
       type: "tween",

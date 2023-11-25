@@ -1,11 +1,20 @@
 import { FaArrowDownLong } from "react-icons/fa6";
+import { TypingText } from "../components";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
 
 const About = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-y-2 
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer(0.7, 2)}
+      className="w-full flex flex-col items-center gap-y-3 
     py-16 lg:py-14 2xl:py-12
-    ">
-      <h3
+    "
+    >
+      {/* <h3
         className="
         font-normal 
         text-[14px] 
@@ -13,8 +22,10 @@ const About = () => {
       "
       >
         | O Nas
-      </h3>
-      <p
+      </h3> */}
+      <TypingText text="| O Nas" />
+      <motion.p
+        variants={fadeIn("up", "spring", 1)}
         className="
         md:w-[80%] lg:w-1/2
       text-neutral-600 
@@ -29,9 +40,11 @@ const About = () => {
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book.
-      </p>
-      <FaArrowDownLong size={20}/>
-    </section>
+      </motion.p>
+      <motion.div variants={fadeIn("up", "spring", 1)}>
+        <FaArrowDownLong size={20} />
+      </motion.div>
+    </motion.section>
   );
 };
 

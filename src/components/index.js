@@ -5,3 +5,4 @@ export { default as TeamMemberCard } from "./TeamMemberCard";
 export { default as ContactCard } from "./ContactCard";
 export { default as Carousel } from "./Carousel";
 export { default as ScrollToTop } from "./SrollToTop";
+export { default as TypingText } from "./TypingText";

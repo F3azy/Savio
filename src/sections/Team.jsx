@@ -1,18 +1,22 @@
-import { TeamMemberCard } from "../components";
+import { TeamMemberCard, TypingText } from "../components";
 import Image1 from "../assets/Carousel_Images/Image1.png";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 
 const Team = () => {
   return (
-    <section
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer(1)}
       className="w-full 
     flex flex-col items-center gap-y-14 
-    lg:py-14 2xl:py-12
+    lg:py-14 2xl:py-14 lg:mt-10
     relative z-10
     "
     >
-      <h3
+      {/* <h3
         className="
         font-normal 
         text-[14px] 
@@ -20,7 +24,8 @@ const Team = () => {
       "
       >
         | Nasz Skład
-      </h3>
+      </h3> */}
+      <TypingText text="| Nasz Skład" />
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -65,7 +70,7 @@ const Team = () => {
           since the 1500s.`}
         />
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 
