@@ -23,7 +23,7 @@ export const fadeIn = (direction, type, duration, delay, offset = 100) => {
   };
 };
 
-export const slideIn = (direction, type, duration, delay = 0, offset = 100) => {
+export const slideIn = (direction, type, duration, delay, offset = 100) => {
   return {
     hidden: {
       x: direction === "left" ? offset : direction === "right" ? -offset : 0,
@@ -36,7 +36,7 @@ export const slideIn = (direction, type, duration, delay = 0, offset = 100) => {
       transition: {
         when: "beforeChildren",
         type: type,
-        delay: delay,
+        ...(delay && { delay: delay }),
         duration: duration,
         ease: "easeOut",
       },
@@ -44,7 +44,7 @@ export const slideIn = (direction, type, duration, delay = 0, offset = 100) => {
   };
 };
 
-export const zoomIn = (duration, delay = 0) => {
+export const zoomIn = (duration, delay) => {
   return {
     hidden: {
       scale: 0,
@@ -55,7 +55,7 @@ export const zoomIn = (duration, delay = 0) => {
       opacity: 1,
       transition: {
         type: "tween",
-        delay: delay,
+        ...(delay && { delay: delay }),
         duration: duration,
         ease: "easeOut",
       },
