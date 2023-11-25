@@ -1,9 +1,16 @@
 import { SavioLogo } from "../assets";
 import { footerSocialIcons } from "../constans";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Footer = () => {
   return (
-    <footer className="
+    <motion.footer
+    initial="hidden"
+    whileInView="visible"
+    viewport={{once: true}}
+    variants={fadeIn("down", "", 0.5, 0.5, 50)}
+    className="
     mt-10 md:mt-20 pt-5 md:pt-8 pb-3 
     flex flex-col gap-y-4 items-center 
     border-t-2 border-brand-primary/20
@@ -33,7 +40,7 @@ const Footer = () => {
           Copyright © {new Date().getFullYear()} Savio. Wszelkie prawa
           zastrzeżone.
         </p>
-    </footer>
+    </motion.footer>
   );
 };
 
