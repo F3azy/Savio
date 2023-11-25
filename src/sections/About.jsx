@@ -2,14 +2,24 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import { TypingText } from "../components";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
+import useWindowSize from "../hooks/useWindowSize";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const windowSize = useWindowSize();
+  const [isMobile, setIsMobile] = useState(null);
+
+  useEffect(() => {
+    if (windowSize >= 768) setIsMobile(false);
+    else setIsMobile(true);
+  }, [windowSize]);
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(0.7, 2.8)}
+      variants={isMobile && isMobile ? staggerContainer(0.7, 0.6) : staggerContainer(0.7, 2.8)}
       className="w-full flex flex-col items-center gap-y-3 
     py-16 lg:py-14 2xl:py-12
     "
