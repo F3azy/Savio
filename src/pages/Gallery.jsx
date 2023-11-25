@@ -28,10 +28,10 @@ const Gallery = () => {
   const windowSize = useWindowSize();
 
   useEffect(() => {
-    if (window.innerWidth >= 1280) {
+    if (windowSize >= 1280) {
       setVisibleElements(3);
       setYTExternal(false);
-    } else if (window.innerWidth >= 768) {
+    } else if (windowSize >= 768) {
       setVisibleElements(2.5);
       setYTExternal(true);
     } else {
