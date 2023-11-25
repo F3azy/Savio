@@ -13,6 +13,22 @@ body, html {
     background-color: theme('colors.blue.50');
 }
 
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+nav {
+  animation-name: slideInFromUp; 
+  animation-duration: 1s;
+  animation-timing-function:  ease-in-out;
+  animation-iteration-count: 1;
+}
 
 .gradient-1 {
   position: absolute;

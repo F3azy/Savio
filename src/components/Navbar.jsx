@@ -12,11 +12,7 @@ const Navbar = () => {
       : "bg-transparent";
 
   return (
-    <motion.nav
-    initial="hidden"
-    whileInView="visible"
-    viewport={{once: true}}
-    variants={slideIn("down", "", 0.5, 0.5, 68)}
+    <nav
       className={`
       w-full max-h-[68px] flex justify-between 
       px-[16px] xl:px-[100px] 2xl:px-[300px] 
@@ -54,7 +50,7 @@ const Navbar = () => {
           Galeria
         </Link>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
