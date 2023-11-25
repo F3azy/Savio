@@ -11,7 +11,7 @@ const Footer = () => {
     viewport={{once: true}}
     variants={fadeIn("down", "", 0.5, 0.1, 50)}
     className="
-    mt-10 md:mt-20 pt-5 md:pt-8 pb-3 
+    mt-10 md:mt-20 py-5 md:py-8 
     flex flex-col gap-y-4 items-center 
     border-t-2 border-brand-primary/20
     relative

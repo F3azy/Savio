@@ -75,7 +75,7 @@ const Carousel = ({
         }
       >
         <motion.div
-          variants={staggerContainer(0.3, 0.5)}
+          variants={staggerContainer(0.3)}
           className={divClassName}
           style={{
             width: calcString,
