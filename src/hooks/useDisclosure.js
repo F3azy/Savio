@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function useDisclosure() {
+export default function useDisclosure() {
   const [isOpen, setIsOpen] = useState(false);
 
     const onOpen = () => {
