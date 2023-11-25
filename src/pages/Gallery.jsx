@@ -3,9 +3,10 @@ import { Carousel, Modal } from "../components";
 import { FaPlay } from "react-icons/fa";
 import { YTThumbnail, YTVideos, YTModalVideos } from "../constans";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
-import { useDisclosure } from "../hooks/useDisclosure";
+import useDisclosure from "../hooks/useDisclosure";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
+import useWindowSize from "../hooks/useWindowSize";
 
 const Gallery = () => {
   const {
@@ -24,28 +25,20 @@ const Gallery = () => {
   const [visibleElements, setVisibleElements] = useState(3);
   const [YTExternal, setYTExternal] = useState(false);
 
+  const windowSize = useWindowSize();
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1280) {
-        setVisibleElements(3);
-        setYTExternal(false);
-      } else if (window.innerWidth >= 768) {
-        setVisibleElements(2.5);
-        setYTExternal(true);
-      } else {
-        setVisibleElements(1.5);
-        setYTExternal(true);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    if (window.innerWidth >= 1280) {
+      setVisibleElements(3);
+      setYTExternal(false);
+    } else if (window.innerWidth >= 768) {
+      setVisibleElements(2.5);
+      setYTExternal(true);
+    } else {
+      setVisibleElements(1.5);
+      setYTExternal(true);
+    }
+  }, [windowSize]);
 
   return (
     <motion.div
