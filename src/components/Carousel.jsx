@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import useInterval from "../hooks/useInterval";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const ACTIONS = {
   NEXT: "NEXT",
@@ -65,8 +67,15 @@ const Carousel = ({
 
   return (
     <div className="relative">
-      <div className={isScrollable ? "overflow-x-scroll xl:overflow-x-hidden" : "overflow-x-hidden"}>
-        <div
+      <div
+        className={
+          isScrollable
+            ? "overflow-x-scroll xl:overflow-x-hidden"
+            : "overflow-x-hidden"
+        }
+      >
+        <motion.div
+          variants={staggerContainer(0.3, 0.5)}
           className={divClassName}
           style={{
             width: calcString,
@@ -78,11 +87,15 @@ const Carousel = ({
           }}
         >
           {children}
-        </div>
+        </motion.div>
       </div>
       {showButtons && (
         <>
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn("right", "", 0.5, 1.5)}
             className="
            hidden
           absolute 
@@ -99,8 +112,12 @@ const Carousel = ({
               size={25}
               onClick={() => changePage(ACTIONS.PREVIOUS)}
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn("left", "", 0.5, 1.5)}
             className="
             hidden
         absolute 
@@ -117,7 +134,7 @@ const Carousel = ({
               size={25}
               onClick={() => changePage(ACTIONS.NEXT)}
             />
-          </div>
+          </motion.div>
         </>
       )}
     </div>

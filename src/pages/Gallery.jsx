@@ -4,6 +4,8 @@ import { FaPlay } from "react-icons/fa";
 import { YTThumbnail, YTVideos, YTModalVideos } from "../constans";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
 import { useDisclosure } from "../hooks/useDisclosure";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
 
 const Gallery = () => {
   const {
@@ -46,12 +48,24 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-y-[36px] py-2">
-      <div className="flex flex-col gap-y-[8px] relative">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer(2, 0.75)}
+      className="flex flex-col gap-y-[36px] py-2"
+    >
+      <motion.div
+        variants={staggerContainer(0.3)}
+        className="flex flex-col gap-y-[8px] relative"
+      >
         <div className="gradient-4 xl:left-[-37%] xl:bottom-0" />
-        <h3 className="text-[24px] font-bold tracking-wider relative z-10">
+        <motion.h3
+          variants={fadeIn("left", "", 0.5)}
+          className="text-[24px] font-bold tracking-wider relative z-10"
+        >
           Video
-        </h3>
+        </motion.h3>
         <div className="relative z-10">
           <Carousel
             elementsTotal={YTThumbnail.length}
@@ -62,7 +76,11 @@ const Gallery = () => {
             gridColTem={"grid-cols-[repeat(" + YTThumbnail.length + ",_1fr)]"}
           >
             {YTThumbnail.map((thumbnail, idx) => (
-              <div key={idx} className="overflow-hidden relative rounded-xl">
+              <motion.div
+                key={idx}
+                variants={fadeIn("left", "", 0.5)}
+                className="overflow-hidden relative rounded-xl"
+              >
                 <img
                   className="my-[-10%] w-full"
                   src={thumbnail}
@@ -84,27 +102,33 @@ const Gallery = () => {
                 h-[40px] md:h-[70px]
                 "
                   onClick={() => {
-                    if (YTExternal)
-                      window.open(YTVideos[idx], "_blank");
+                    if (YTExternal) window.open(YTVideos[idx], "_blank");
                     else {
                       setModalVideo(YTModalVideos[idx]);
                       onVideoOpen();
                     }
                   }}
                 />
-              </div>
+              </motion.div>
             ))}
           </Carousel>
         </div>
-      </div>
-      <div className="flex flex-col gap-y-[8px] relative">
+      </motion.div>
+      <motion.div
+        variants={staggerContainer(0.3)}
+        className="flex flex-col gap-y-[8px] relative"
+      >
         <div className="gradient-1 xl:left-[-10%] top-[50%]" />
         <div className="gradient-2 right-[0] xl:right-[-35%] top-0" />
         <div className="gradient-5 bottom-0 left-[70%]" />
-        <h3 className="text-[24px] font-bold tracking-wider relative z-10">
+        <motion.h3
+          variants={fadeIn("left", "", 0.5)}
+          className="text-[24px] font-bold tracking-wider relative z-10"
+        >
           Zdjęcia
-        </h3>
-        <div
+        </motion.h3>
+        <motion.div
+          variants={staggerContainer(0.25)}
           className="grid
           grid-cols-2 md:grid-cols-3 lg:grid-cols-4
           gap-6
@@ -113,7 +137,8 @@ const Gallery = () => {
           "
         >
           {HomeCarouselImages.map((image, idx) => (
-            <div
+            <motion.div
+              variants={zoomIn(0.3)}
               key={idx}
               className="
             rounded-lg 
@@ -130,10 +155,11 @@ const Gallery = () => {
               }}
             >
               <img className="w-full" src={image} alt={"Image" + 1} />
-            </div>
+            </motion.div>
           ))}
           {HomeCarouselImages.map((image, idx) => (
-            <div
+            <motion.div
+              variants={zoomIn(0.3)}
               key={idx}
               className="
             rounded-lg 
@@ -150,10 +176,11 @@ const Gallery = () => {
               }}
             >
               <img className="w-full" src={image} alt={"Image" + 1} />
-            </div>
+            </motion.div>
           ))}
           {HomeCarouselImages.map((image, idx) => (
-            <div
+            <motion.div
+              variants={zoomIn(0.3)}
               key={idx}
               className="
             rounded-lg 
@@ -170,10 +197,11 @@ const Gallery = () => {
               }}
             >
               <img className="w-full" src={image} alt={"Image" + 1} />
-            </div>
+            </motion.div>
           ))}
           {HomeCarouselImages.map((image, idx) => (
-            <div
+            <motion.div
+              variants={zoomIn(0.3)}
               key={idx}
               className="
             rounded-lg 
@@ -190,10 +218,10 @@ const Gallery = () => {
               }}
             >
               <img className="w-full" src={image} alt={"Image" + 1} />
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/*Image Modal*/}
       <Modal isOpen={isImageOpen} onClose={onImageClose}>
@@ -227,7 +255,7 @@ const Gallery = () => {
           ></iframe>
         </div>
       </Modal>
-    </div>
+    </motion.div>
   );
 };
 
