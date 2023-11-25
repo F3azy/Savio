@@ -1,17 +1,37 @@
 import { HeroBlob } from "../assets";
 import { Carousel } from "../components";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
 
 const Hero = () => {
   return (
-    <section className="
+    <motion.section
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={staggerContainer(2, 0.5)}
+      className="
     flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-10
     py-3 lg:py-14 2xl:py-12
-    ">
-      <div className="flex-[0.5]">
-        <h2 className="leading-[1.1] text-4xl md:text-6xl font-bold">
-          <p className="text-brand-secondary">Zespół Muzyczny</p>
-          <p
+    "
+    >
+      <motion.div
+        variants={staggerContainer(1.5)}
+        className="flex-[0.5]"
+      >
+        <motion.h2
+          variants={staggerContainer(0.5, 0.5)}
+          className="leading-[1.1] text-4xl md:text-6xl font-bold"
+        >
+          <motion.p
+            variants={fadeIn("down", "spring", 1)}
+            className="text-brand-secondary"
+          >
+            Zespół Muzyczny
+          </motion.p>
+          <motion.p
+            variants={fadeIn("down", "spring", 1)}
             className="
           w-min
           relative
@@ -27,9 +47,10 @@ const Hero = () => {
           "
           >
             Savio
-          </p>
-        </h2>
-        <p
+          </motion.p>
+        </motion.h2>
+        <motion.p
+          variants={fadeIn("down", "spring", 1)}
           className="
         text-neutral-700 
         leading-[1.5] 
@@ -42,9 +63,12 @@ const Hero = () => {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
-        </p>
-      </div>
-      <div className="md:w-[60%] lg:w-full flex-[0.4] relative">
+        </motion.p>
+      </motion.div>
+      <motion.div
+        variants={zoomIn(0.5)}
+        className="md:w-[60%] lg:w-full flex-[0.4] relative"
+      >
         <div
           className="
         w-[90%] lg:w-[75%]
@@ -77,8 +101,8 @@ const Hero = () => {
           src={HeroBlob}
           alt="Hero-Blob"
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
