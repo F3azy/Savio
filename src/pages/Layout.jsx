@@ -8,7 +8,6 @@ const Layout = () => {
       <main
         className="
         px-4 xl:px-[100px] 2xl:px-[300px] 
-        py-1 2xl:py-5
       "
       >
         <Outlet />

@@ -3,7 +3,7 @@ import { Hero, About, Team, Contact } from "../sections";
 const Home = () => {
   return (
     <>
-      <div className="relative">
+      <div className="relative xl:min-h-[calc(100vh-50px)]">
         <Hero />
         <About />
         <div className="gradient-1 top-[10%] right-[-30%]" />

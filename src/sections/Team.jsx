@@ -9,27 +9,15 @@ const Team = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(1)}
+      variants={staggerContainer(0.5, 0.3)}
       className="w-full 
     flex flex-col items-center gap-y-14 
-    lg:py-14 2xl:py-14 lg:mt-10
+    lg:py-14 xl:mb-20
     relative z-10
     "
     >
-      {/* <h3
-        className="
-        font-normal 
-        text-[14px] 
-        tracking-widest
-      "
-      >
-        | Nasz Skład
-      </h3> */}
       <TypingText text="| Nasz Skład" />
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
         variants={staggerContainer(0.5, 0.5)}
         className="w-full 
       grid 

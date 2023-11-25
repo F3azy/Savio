@@ -9,18 +9,12 @@ const Contact = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(0.5)}
-      className="w-full flex flex-col items-center gap-y-16 md:gap-y-8 pt-12 relative z-10"
+      variants={staggerContainer(0.5, 0.3)}
+      className="w-full 
+      flex flex-col items-center gap-y-16 md:gap-y-8 
+      pt-14
+      relative z-10"
     >
-      {/* <h3
-        className="
-        font-normal 
-        text-[14px] 
-        tracking-widest
-      "
-      >
-        | Kontakt
-      </h3> */}
       <TypingText text="| Kontakt" />
       <motion.div
         variants={staggerContainer(0.5)}

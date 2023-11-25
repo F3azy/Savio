@@ -14,15 +14,6 @@ const About = () => {
     py-16 lg:py-14 2xl:py-12
     "
     >
-      {/* <h3
-        className="
-        font-normal 
-        text-[14px] 
-        tracking-widest
-      "
-      >
-        | O Nas
-      </h3> */}
       <TypingText text="| O Nas" />
       <motion.p
         variants={fadeIn("up", "spring", 1)}
