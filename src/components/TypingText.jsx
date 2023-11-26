@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer, textContainer, textVariant } from "../utils/motion";
+import { staggerContainer, textVariant } from "../utils/motion";
 
 const TypingText = ({ text }) => {
   return (
@@ -10,7 +10,7 @@ const TypingText = ({ text }) => {
     tracking-widest
   "
     >
-      {Array.from(text).map((char, idx) => 
+      {Array.from(text).map((char, idx) =>  
         <motion.span
         className="inline-block"
           key={idx}
