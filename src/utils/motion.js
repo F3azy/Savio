@@ -80,16 +80,6 @@ export const staggerContainer = (
   };
 };
 
-export const textContainer = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.1 },
-  }),
-};
-
 export const textVariant = {
   hidden: {
     opacity: 0,
