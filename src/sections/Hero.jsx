@@ -13,8 +13,7 @@ const Hero = () => {
       variants={staggerContainer(1.5, 0.3)}
       className="
     flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-10
-    py-5 lg:py-14 2xl:py-12
-    mb-5
+    py-4 lg:py-14 2xl:py-12
     "
     >
       <motion.div variants={staggerContainer(1)} className="flex-[0.5]">
@@ -54,7 +53,7 @@ const Hero = () => {
         leading-[1.5] 
         tracking-widest
         text-justify
-        pt-6
+        mt-4 md:mt-6
         "
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -69,7 +68,7 @@ const Hero = () => {
       >
         <div
           className="
-        w-[90%] lg:w-[75%]
+       w-[75%]
         m-auto lg:m-0
         overflow-hidden
         rounded-xl 
@@ -93,7 +92,7 @@ const Hero = () => {
           className="
           absolute
           -right-16 md:-right-24 lg:right-0
-          -bottom-28
+          -bottom-24
           z-10     
           "
           src={HeroBlob}
