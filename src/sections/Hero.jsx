@@ -68,7 +68,7 @@ const Hero = () => {
       >
         <div
           className="
-       w-[75%]
+       w-[90%] lg:w-[75%]
         m-auto lg:m-0
         overflow-hidden
         rounded-xl 

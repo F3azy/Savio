@@ -2,16 +2,21 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import { TypingText } from "../components";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
+import useWindowWidth from "../hooks/useWindowSize";
 
 const About = () => {
+  const windowWidth = useWindowWidth();
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(0.7, 2.5)}
+      variants={
+        windowWidth >= 768 ? staggerContainer(0.7, 2.5) : staggerContainer(0.7)
+      }
       className="w-full flex flex-col items-center gap-y-3 
-    py-8 lg:py-14 2xl:py-12
+    py-16 lg:py-14 2xl:py-12
     "
     >
       <TypingText text="| O Nas" />
