@@ -10,18 +10,18 @@ const Hero = () => {
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    variants={staggerContainer(2, 0.3)}
+    variants={staggerContainer(1.5, 0.3)}
       className="
     flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-10
     py-4 lg:py-14 2xl:py-12
     "
     >
       <motion.div
-        variants={staggerContainer(1.5)}
+        variants={staggerContainer(1)}
         className="flex-[0.5]"
       >
         <motion.h2
-          variants={staggerContainer(0.5, 0.5)}
+          variants={staggerContainer(0.5)}
           className="leading-[1.1] text-4xl md:text-6xl font-bold"
         >
           <motion.p
