@@ -27,6 +27,8 @@ const Gallery = () => {
 
   const windowSize = useWindowSize();
 
+  const [isMobile, setIsMobile] = useState(null);
+
   useEffect(() => {
     if (windowSize >= 1280) {
       setVisibleElements(3);
@@ -38,6 +40,9 @@ const Gallery = () => {
       setVisibleElements(1.5);
       setYTExternal(true);
     }
+
+    if (windowSize >= 768) setIsMobile(false);
+    else setIsMobile(true);
   }, [windowSize]);
 
   return (
@@ -45,7 +50,7 @@ const Gallery = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(1.3, 0.7)}
+      variants={isMobile && isMobile ? staggerContainer(1, 0.7) : staggerContainer(1.3, 0.7)}
       className="flex flex-col gap-y-[36px] py-2"
     >
       <motion.div

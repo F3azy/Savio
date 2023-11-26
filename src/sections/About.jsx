@@ -19,7 +19,7 @@ const About = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={isMobile && isMobile ? staggerContainer(0.7, 0.6) : staggerContainer(0.7, 2.8)}
+      variants={isMobile && isMobile ? staggerContainer(0.7, 0) : staggerContainer(0.7, 2.8)}
       className="w-full flex flex-col items-center gap-y-3 
     py-16 lg:py-14 2xl:py-12
     "
