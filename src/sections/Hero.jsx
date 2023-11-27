@@ -3,8 +3,11 @@ import { Carousel } from "../components";
 import { HomeCarouselImages } from "../assets/Carousel_Images";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
+import useWindowWidth from "../hooks/useWindowSize";
 
 const Hero = () => {
+  const windowWidth = useWindowWidth();
+
   return (
     <motion.section
       initial="hidden"
@@ -22,13 +25,13 @@ const Hero = () => {
           className="leading-[1.1] text-4xl md:text-6xl font-bold"
         >
           <motion.p
-            variants={fadeIn("down", "spring", 1)}
+            variants={fadeIn(windowWidth >= 768 ? "down" : "right", "spring", 1)}
             className="text-brand-secondary"
           >
             Zespół Muzyczny
           </motion.p>
           <motion.p
-            variants={fadeIn("down", "spring", 1)}
+            variants={fadeIn(windowWidth >= 768 ? "down" : "right", "spring", 1)}
             className="
           w-min
           relative
@@ -47,7 +50,7 @@ const Hero = () => {
           </motion.p>
         </motion.h2>
         <motion.p
-          variants={fadeIn("down", "spring", 1)}
+          variants={fadeIn(windowWidth >= 768 ? "down" : "right", "spring", 1)}
           className="
         text-neutral-700 
         leading-[1.5] 
