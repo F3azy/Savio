@@ -13,7 +13,7 @@ const About = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={
-        windowWidth >= 768 ? staggerContainer(0.7, 2.6) : staggerContainer(0.7)
+        windowWidth >= 768 ? staggerContainer(0.7, 2.5) : staggerContainer(0.7)
       }
       className="w-full flex flex-col items-center gap-y-3 
     py-16 lg:py-14 2xl:py-12

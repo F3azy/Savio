@@ -13,7 +13,7 @@ const Hero = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={staggerContainer(1.5, 0.5)}
+      variants={staggerContainer(1.5, 0.3)}
       className="
     flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-10
     py-4 lg:py-14 2xl:py-12
