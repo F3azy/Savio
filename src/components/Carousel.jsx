@@ -4,11 +4,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
 
-const ACTIONS = {
-  NEXT: "NEXT",
-  PREVIOUS: "PREVIOUS",
-};
-
 const Carousel = ({
   elementsTotal,
   visibleElements,
@@ -24,22 +19,15 @@ const Carousel = ({
   const [currentPage, setCurrentPage] = useState(0);
   const [clicked, setClicked] = useState(false);
 
-  function changePage(action) {
-    switch (action) {
-      case ACTIONS.NEXT:
-        if (clicked) break;
-        if (currentPage >= pages - 1) setCurrentPage(0);
-        else setCurrentPage((prev) => prev + 1);
-        break;
-      case ACTIONS.PREVIOUS:
-        if (currentPage <= 0 || clicked) break;
-        setCurrentPage((prev) => prev - 1);
-        break;
-      default:
-        console.log("No case worked");
-        break;
-    }
-    setClicked(true);
+  function next() {
+    if (clicked) return;
+    if (currentPage >= pages - 1) setCurrentPage(0);
+    else setCurrentPage((prev) => prev + 1);
+  }
+
+  function prev() {
+    if (currentPage <= 0 || clicked) return;
+    setCurrentPage((prev) => prev - 1);
   }
 
   useEffect(() => {
@@ -50,7 +38,7 @@ const Carousel = ({
 
   useInterval(
     () => {
-      changePage(ACTIONS.NEXT);
+      next();
     },
     !clicked && animate ? 5000 : null
   );
@@ -110,7 +98,7 @@ const Carousel = ({
             <FaArrowLeft
               className="cursor-pointer hover:text-brand-secondary"
               size={25}
-              onClick={() => changePage(ACTIONS.PREVIOUS)}
+              onClick={() => prev()}
             />
           </motion.div>
           <motion.div
@@ -132,7 +120,7 @@ const Carousel = ({
             <FaArrowRight
               className="cursor-pointer hover:text-brand-secondary"
               size={25}
-              onClick={() => changePage(ACTIONS.NEXT)}
+              onClick={() => next()}
             />
           </motion.div>
         </>
