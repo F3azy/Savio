@@ -83,7 +83,7 @@ const Carousel = ({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeIn("right", "", 0.5, 1.5)}
+            variants={fadeIn("right", "", 0.5, 1.5, 50)}
             className="
            hidden
           absolute 
@@ -105,7 +105,7 @@ const Carousel = ({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeIn("left", "", 0.5, 1.5)}
+            variants={fadeIn("left", "", 0.5, 1.5, 50)}
             className="
             hidden
         absolute 
