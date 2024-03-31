@@ -1,7 +1,7 @@
-import { SavioLogo } from "../assets";
-import { footerSocialIcons } from "../constans";
+import { SavioLogo } from "../../assets";
+import { footerSocialIcons } from "../../constans";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { fadeIn } from "../../utils/motion";
 
 const Footer = () => {
   return (

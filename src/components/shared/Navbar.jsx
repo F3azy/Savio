@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { SavioLogo } from "../assets";
-import useScrollPosition from "../hooks/useScrollPosition";
-import { motion } from "framer-motion";
-import { slideIn } from "../utils/motion";
+import { SavioLogo } from "../../assets";
+import { useScrollPosition } from "../../hooks";
 
 const Navbar = () => {
   const scrollPosition = useScrollPosition();

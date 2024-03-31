@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import useInterval from "../hooks/useInterval";
+import { useInterval } from "../../hooks";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 const Carousel = ({
   elementsTotal,

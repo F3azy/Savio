@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { staggerContainer, textVariant } from "../utils/motion";
+import { staggerContainer, textVariant } from "../../utils/motion";
 
 const TypingText = ({ text }) => {
   return (

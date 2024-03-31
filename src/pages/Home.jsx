@@ -1,4 +1,4 @@
-import { Hero, About, Team, Contact } from "../sections";
+import { Hero, About, Team, Contact } from "../sections/Home";
 
 const Home = () => {
   return (
